@@ -10,7 +10,6 @@ def log(func):
 def function(*args):
     return 3 + len(args)
 
-
 print(function(4, 4, 4))
 
 #задание 2
@@ -20,7 +19,7 @@ def html(func):
         ans = func(*args, **kwargs)
         date = datetime.now().strftime("%Y/%m/%d %H:%M")
         with open('my_file.html','w') as f:
-            f.write(f'{date} \n <html><strong>{ans}</strong></html>')
+            f.write(f'{date} <html><strong>{ans}</strong></html>')
         return ans
     return wrapper
 
